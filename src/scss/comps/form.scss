@@ -1,0 +1,124 @@
+.form {
+  background-color: #FFF;
+  padding: 30px;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .field {
+    width: 100%;
+    flex: 0 0 100%;
+    .label {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    .input, .select, .textarea {
+      border: 1px solid #05042E;
+      background-color: #FFF;
+      border-radius: 5px;
+      font-family: $font-body;
+      font-size: 16px;
+      height: 40px;
+      &:focus {
+        outline: 0;
+        border: 0;
+      }
+    }
+    .textarea {
+      min-height: 90px;
+      max-height: 120px;
+    }
+    .select {
+      width: 100%;
+      .select-inner {
+        height: auto;
+        width: 100%;
+        border: 0;
+      }
+    }
+    .input-file {
+      background-color: #F5F5F5;
+      padding: 12px 22px;
+      border-radius: 5px;
+      width: 100%;
+      transition: $basic-transition;
+      font-size: 16px;
+      &:hover {
+        background-color: $c-primary;
+        color: #FFF;
+      }
+    }
+    &.is-checkbox-group {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+    .checkbox {
+      .checkbox {
+        vertical-align: middle;
+      }
+      .label {
+        vertical-align: middle;
+        line-height: 1;
+        margin-left: 10px;
+        margin-bottom: 0;
+        font-weight: 400;
+        font-size: 16px;
+        display: inline-block;
+      }
+    }
+    .field-checkbox {
+      display: flex;
+      flex-flow: row wrap;
+      .checkbox-inner {
+        position: relative;
+        .checkbox {
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          z-index: -1;
+        }
+        .checkbox + label {
+          background-color: #F8F8F8;
+          border-radius: 5px;
+          font-size: 16px;
+          font-weight: 400;
+          padding: 5px 10px;
+          cursor: pointer;
+          transition: $basic-transition;
+          margin-right: 15px;
+          margin-bottom: 10px;
+        }
+        .checkbox:checked + label,
+        .checkbox + label:hover {
+          background-color: $c-primary;
+          color: #FFF
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+    &.field-button {
+      margin: 30px 0 0;
+    }
+    &.is-half {
+      width: calc(50% - 5px);
+      flex: 0 0 calc(50% - 5px);
+    }
+  }
+}
+
+@media only screen and (max-width: 989px) {
+  .form {
+    .field {
+      &.is-half {
+        flex: 0 0 100%;
+        width: 100%;
+      }
+    }
+  }
+}

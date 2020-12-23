@@ -1,0 +1,22 @@
+.navbar {
+  padding: 10px;
+  .navbar-menu {
+    .navbar-link {
+      font-size: 18px;
+      font-weight: 500;
+      transition: $basic-transition;
+      border-radius: 5px;
+      &:hover {
+        background-color: #F7F7F7;
+      }
+    }
+    .has-dropdown {
+      transition: $basic-transition;
+      .navbar-dropdown {
+        border: 0;
+        box-shadow: none;
+        border-radius: 5px;
+      }
+    }
+  }
+}

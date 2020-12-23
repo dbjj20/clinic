@@ -1,0 +1,28 @@
+.pagination {
+  .pagination-previous, .pagination-next {
+    transition: $basic-transition;
+    background-color: $c-tertiary;
+    border: 0;
+    color: $c-primary;
+    i {
+      font-size: 24px;
+    }
+    &:hover {
+      color: $c-primary-hv;
+      background-color: $c-tertiary-hv;
+    }
+  }
+  .pagination-link {
+    transition: $basic-transition;
+    background-color: $c-tertiary;
+    border: 0;
+    &.is-current, 
+    &:hover {
+      background-color: $c-primary;
+      color: #FFF;
+    }
+  }
+  > * {
+    order: initial;
+  }
+}

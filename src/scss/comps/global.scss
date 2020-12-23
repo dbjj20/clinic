@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: $font-body;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #222;
+  background-color: #FBFCFC;
+}
+
+h1, h2, h3, h4, h5, h6, a, button, label {
+  font-family: $font-sans;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+h1{
+  font-size: 46px;
+}
+
+h2{
+  font-size: 40px;
+}
+
+h3{
+  font-size: 34px;
+}
+
+h4{
+  font-size: 28px;
+}
+
+h5{
+  font-size: 22px;
+}
+
+h6{
+  font-size: 18px;
+}
+
+.columns {
+  margin: 0 !important;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.divider {
+  margin: 30px 0;
+  background-color: #05042E;
+  width: 100%;
+  &.is-inverted {
+    background-color: #F2F2F2;
+  }
+}
+
+.is-fullheight {
+  height: 100vh;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.w-f-100 {
+  width: 100%;
+  flex: 0 0 100%
+}
+
+.list-disc {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+/***** Sidebar and Content *****/
+
+.column-sidebar {
+  flex: 0 0 22%;
+}
+
+.column-content {
+  .inner-content {
+    padding: 30px;
+    .column {
+      padding: 0;
+    }
+    .inner-content-head {
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-flow: row wrap;
+    }
+  }
+}
+
+@media only screen and (max-width: 989px) {
+  .column-sidebar {
+    position: absolute;
+    z-index: 50;
+    top: 0%;
+    left: -100%;
+    height: 100%;
+    width: 70%;
+    transition: $basic-transition;
+    &.is-opened {
+      left: 0%;
+    }
+  }
+  .column-content {
+    .column:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+/***** Sidebar and Content End *****/
+
+/***** Clinic history profile *****/
+
+.column-content .inner-content .user-profile, 
+.column-content .inner-content .user-notes, 
+  .column-content .inner-content .user-info {
+  border-radius: 10px;
+  background-color: #FFF;
+  padding: 20px;
+}
+
+.user-profile .img-user {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.user-profile h5 {
+  margin-bottom: 20px;
+}
+
+.user-notes {
+  .add-note {
+    margin-bottom: 30px;
+    .field {
+      .textarea {
+        min-height: 60px;
+        max-height: 120px;
+        border: 1px solid #05042E;
+        background-color: #FFF;
+        border-radius: 5px;
+        font-family: $font-body;
+        font-size: 16px;
+      }
+    }
+  }
+  .note {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #FBFCFC;
+    margin-bottom: 15px;
+    .note-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      .date {
+          color: #888;
+      }
+    }
+    .note-content {
+      padding: 15px 0;
+      border-top: 1px solid #DDD;
+      border-bottom: 1px solid #DDD;
+    }
+  
+    .note-footer {
+      margin-top: 15px;
+    }
+  }
+}
+
+.allergy {
+  .allergy-head {
+    border-radius: 5px;
+    background-color: $c-secondary;
+    color: #FFF;
+    padding: 10px 5px;
+    margin-bottom: 15px;
+    h6 {
+      font-size: 16px;
+    }
+  }
+  .allergy-add {
+    margin-top: 20px;
+    .field {
+      display: flex;
+      .input {
+        border-radius: 0px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border: 1px solid #05042E;
+        background-color: #FFF;
+        font-family: $font-body;
+        font-size: 16px;
+      }
+      .button {
+        border-radius: 0px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    }
+  }
+}
+
+/***** Clinic history profile End *****/

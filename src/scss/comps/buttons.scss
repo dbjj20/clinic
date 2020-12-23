@@ -1,0 +1,71 @@
+.button {
+  transition: $basic-transition;
+  border-radius: 5px;
+  &.is-primary {
+    background-color: $c-primary;
+    &.is-outline {
+      border: 2px solid $c-primary;
+      background-color: transparent;
+      color: $c-primary;
+      font-weight: 500;
+      &:hover {
+        background-color: $c-primary;
+        color: #FFF;
+      }
+    }
+    &:hover {
+      background-color: $c-primary-hv;
+    }
+  }
+  &.is-secondary {
+    background-color: $c-secondary;
+    color: #FFF;
+    &.is-outline {
+      border: 2px solid $c-secondary;
+      background-color: transparent;
+      color: $c-secondary;
+      font-weight: 500;
+      &:hover {
+        background-color: $c-secondary;
+        color: #FFF;
+      }
+    }
+    &:hover {
+      background-color: $c-secondary-hv;
+    }
+  }
+  &.is-canceled {
+    background-color: transparent;
+    border: 0;
+    color: $c-secondary;
+    &:hover {
+      background-color: $c-secondary;
+      color: #FFF;
+    }
+  }
+  &.is-small {
+    border-radius: 5px;
+  }
+}
+
+.link {
+  font-size: 14px;
+  display: inline-block;
+  padding: 2px 4px;
+  transition: $basic-transition;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+  &.edit {
+    color: $c-primary;
+    &:hover {
+      color: $c-primary-hv;
+    }
+  }
+  &.cancel {
+    color: $c-secondary;
+    &:hover {
+      color: $c-secondary-hv;
+    }
+  }
+}

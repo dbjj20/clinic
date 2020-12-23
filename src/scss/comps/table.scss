@@ -1,0 +1,95 @@
+.table-filter {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  .filter-form {
+    flex: 0 0 30%;
+    .field {
+      .input {
+        border: 1px solid #05042E;
+        background-color: #FFF;
+        border-radius: 5px;
+        font-family: $font-body;
+        font-size: 16px;
+        &:focus {
+          outline: 0;
+          border: 0;
+        }
+      }
+      .control {
+        position: relative;
+      }
+      .button-search {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 40px;
+        font-size: 20px;
+        background-color: transparent;
+        border: 0;
+        transition: $basic-transition;
+        cursor: pointer;
+        &:hover {
+          background-color: #F4F8F9;
+        }
+      }
+    }
+  }
+}
+
+table {
+  width: max-content;
+  background-color: #FFF;
+  border-radius: 5px;
+  overflow: hidden;
+  thead {
+    background-color: $c-primary;
+    th {
+      padding: 15px;
+      color: #FFF;
+      font-weight: 600;
+      line-height: 1;
+      &.has-icon {
+        span {
+          display: inline-block;
+          margin-left: 15px;
+          font-size: 18px;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+  tbody {
+    tr {
+      td {
+        padding: 15px;
+        line-height: 1;
+      }
+      background-color: #FFF;
+      &:nth-child(even) {
+        background-color: #F4F8F9;
+      }
+    }
+  }
+  tfoot {
+    .button {
+      margin-top: 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: 989px) {
+  .table-filter {
+    .filter-form {
+      margin-bottom: 20px;
+      flex: 100%;
+    }
+  }
+  table {
+    th, td {
+      white-space: nowrap;
+    }
+  }
+}
