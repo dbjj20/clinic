@@ -1,12 +1,12 @@
 .img-login {
-  // background-image: url('/img/img-login.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: url('../../images/img-login.jpg');
 }
 
 .img-register {
-  // background-image: url('/img/img-login.jpg');
+  background-image: url('../../images/img-login.jpg');
+}
+
+.img-login, .img-register {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
