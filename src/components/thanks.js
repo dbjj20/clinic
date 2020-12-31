@@ -10,8 +10,8 @@ export default function ThankYou () {
         <div className="columns h-100 is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
           <div className="column is-3-desktop">
             <ReactSVG src="../assets/images/undraw_doctors_hwty.svg" className="w-f-full" alt="SVG Doctos" />
-            <img src={ require('../assets/images/img-login.jpg') } alt="SVG Doctos" width="500" height="350" />
-            <img src="../assets/images/img-login.jpg" alt="SVG Doctos" width="500" height="350" />
+            <img src="http://localhost:5000/img-login.jpg" alt="SVG Doctos" width="500" height="350" />
+            <img src="http://localhost:5000/img-login.jpg" alt="SVG Doctos" width="500" height="350" />
             
           </div>
           <div className="column is-8-desktop has-text-centered">
