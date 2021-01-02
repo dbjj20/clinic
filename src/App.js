@@ -1,11 +1,12 @@
-import ThankYou from './components/thanks';
+import React from 'react';
 
-function App() {
-  return (
-    <div>
-      <ThankYou />
-    </div>
-  );
+class App extends React.Component {
+  render () {
+    return (
+      <div>
+      </div>
+    );
+  }
 }
 
 export default App;
